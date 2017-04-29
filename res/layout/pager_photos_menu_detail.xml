@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!--这个listView有移动的时候有黑边，需要设置android:cacheColorHint="#fff"-->
+        <!--分割线也去掉android:divider="@null"-->
+        <ListView
+            android:id="@+id/lv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:cacheColorHint="#fff"
+            android:divider="@null"/>
+
+        <GridView
+            android:id="@+id/gv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

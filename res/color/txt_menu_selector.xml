@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--因为listview没有选中的效果，所以这里是可用和不可用控制-->
+    <item android:color="#f00" android:state_enabled="true"/>
+    <item android:color="#fff"/>
+
+</selector>

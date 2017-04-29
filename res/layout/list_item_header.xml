@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--命名空间不认识，上面也加来了命名空间-->
+<!--listview加头布局，不能识别根部局的高度，他是自己计算高度的，所有套一层布局LinearLayout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!--在viewpager上面添加文字和指示器-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp" >
+
+        <com.xu.zhihbj.view.TopNewsViewPager
+            android:id="@+id/vp_top_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#a000"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <!--命名空间不认识，上面也加来了命名空间-->
+            <!--选中颜色红色-->
+            <!--默认颜色灰色-->
+            <!--半径-->
+            <!--没有边框-->
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:fillColor="#f00"
+                app:pageColor="#cccccc"
+                app:radius="3dp"
+                app:strokeWidth="0dp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>
