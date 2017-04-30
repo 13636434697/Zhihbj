@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--指定分辨率进行单独的布局，布局完全可以不一样，指定分辨率会展示不同的布局，但是一般是相同的布局，就是大小和距离-->
+<!--权重适配除了weight。还有android:weightSun=3-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_main"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+</FrameLayout>

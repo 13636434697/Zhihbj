@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
+import android.view.WindowManager;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
@@ -32,7 +33,16 @@ public class MainActivity extends SlidingFragmentActivity {
         setBehindContentView(R.layout.left_menu);
         SlidingMenu slidingMenu = getSlidingMenu();
         slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);//全屏触摸
-        slidingMenu.setBehindOffset(200);//屏幕预留200像素宽度
+        //slidingMenu.setBehindOffset(200);//屏幕预留200像素宽度
+
+        //典型的代码适配
+        // 200/320  * 屏幕宽度 比例：200像素除以320像素在乘以屏幕宽度
+        WindowManager wm = getWindowManager();
+        //获取屏幕宽度
+        int width = wm.getDefaultDisplay().getWidth();
+        //屏幕预留200像素宽度
+        slidingMenu.setBehindOffset(width * 200 / 320);
+
 
         //一上来就调用初始化界面
         initFragment();

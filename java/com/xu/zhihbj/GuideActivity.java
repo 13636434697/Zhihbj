@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.xu.zhihbj.utils.DensityUtils;
 import com.xu.zhihbj.utils.PrefUtils;
 
 import java.util.ArrayList;
@@ -172,7 +173,9 @@ public class GuideActivity extends Activity {
 				if (i > 0) {
 				// 从第二个点开始设置左边距
 					//设置左边距的话，需要LayoutParams，布局参数来设置左边距
-				params.leftMargin = 10;
+//				params.leftMargin = 10;
+					//这个是经过屏幕适配的
+				params.leftMargin = DensityUtils.dip2px(10, this);
 			}
 
 			point.setLayoutParams(params);// 设置布局参数
