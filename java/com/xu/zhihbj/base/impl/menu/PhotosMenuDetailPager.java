@@ -32,6 +32,7 @@ import com.xu.zhihbj.global.GlobalConstants;
 import com.xu.zhihbj.utils.CacheUtils;
 
 import com.xu.zhihbj.domain.PhotosBean.PhotoNews;
+import com.xu.zhihbj.utils.MyBitmapUtils;
 
 import java.util.ArrayList;
 
@@ -128,14 +129,16 @@ public class PhotosMenuDetailPager extends BaseMenuDetailPager implements OnClic
 	class PhotoAdapter extends BaseAdapter {
 
 		//初始化BitmapUtils
-		private BitmapUtils mBitmapUtils;
+		//private BitmapUtils mBitmapUtils;
+		private MyBitmapUtils mBitmapUtils;
 
 		//构造方法把BitmapUtils传进来
 		public PhotoAdapter() {
 			//初始化BitmapUtils
-			mBitmapUtils = new BitmapUtils(mActivity);
-			//设置BitmapUtils默认图片
-			mBitmapUtils.configDefaultLoadingImage(R.mipmap.pic_item_list_default);
+//			mBitmapUtils = new BitmapUtils(mActivity);
+//			//设置BitmapUtils默认图片
+//			mBitmapUtils.configDefaultLoadingImage(R.mipmap.pic_item_list_default);
+			mBitmapUtils = new MyBitmapUtils();
 		}
 
 		@Override
